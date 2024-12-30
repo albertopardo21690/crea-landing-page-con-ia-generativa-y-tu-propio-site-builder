@@ -7,17 +7,6 @@
 
 ----------
 
-## 📚 **¿Qué ofrece Alberto Pardo Díaz?**
-
--   **Cómo la Inteligencia Artificial** es una estupenda herramienta para diseñadores y desarrolladores web.
-    
--   **Cómo crear Prompts** para recibir respuestas asertivas de parte de la Inteligencia Artificial.
-    
--   **Cómo convertir tu creación visual en código** gracias a un constructor de sitios web desarrollado con experiencia y precisión.
-    
-
-----------
-
 ## 🛠️ **Metodología de trabajo**
 
 Alberto te guía **paso a paso** en la construcción de sistemas que permiten llevar tus **creaciones visuales de layouts web hechas con Inteligencia Artificial** a **código limpio**.
