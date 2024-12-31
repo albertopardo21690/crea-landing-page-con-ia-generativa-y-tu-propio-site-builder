@@ -1,25 +1,10 @@
+# Landing Page Builder
+Es un programa web donde se pueden crear páginas web gracias al sistema Grid que usa **Bootstrap 5** en sus páginas como también contiene un visor de códigos (**HTML, CSS y JavaScript**). Gracias a la Inteligencia Artificial nos puede aportar ideas como ahorro de tiempo, de trabajo y de dinero.
 
-# **Creación de Páginas Web con Inteligencia Artificial y un Constructor de Sitios Web**
+## Instalación
+Para su instalación:
 
-¿Te imaginas tener la posibilidad de crear **infinitas páginas web** solo con **Inteligencia Artificial** y un **constructor de sitios web**?
-
-¡Pues esta es la propuesta de **Alberto Pardo Díaz**!
-
-----------
-
-## 🛠️ **Metodología de trabajo**
-
-Alberto te guía **paso a paso** en la construcción de sistemas que permiten llevar tus **creaciones visuales de layouts web hechas con Inteligencia Artificial** a **código limpio**.
-
-Esto se logra mediante el ejercicio de **arrastrar y soltar módulos comprimidos de código** hechos con la librería de **Bootstrap 5**.
-
-----------
-
-## 🏆 **¡Un enfoque único!**
-
-El trabajo de **Alberto Pardo Díaz** se centra en ofrecer un **Sistema Constructor de Sitios Web** creado con código **desde cero**.
-
-Además, su experiencia asegura la capacidad de **crear infinitas páginas web** combinando la **Inteligencia Artificial Generativa** con sistemas optimizados de desarrollo web.
+ 1. List item
 
 ----------
 
