@@ -8,10 +8,13 @@
 
     </div>
 
-    <div class="navbar-nav text-white me-3">
-        <div class="nav-item text-nowrap">
-            <a href="#" class="nav-link px-3">Cerrar sesión</a>
+    <?php if(isset($_SESSION["admin"])) : ?>
+        <div class="navbar-nav text-white me-3">
+            <div class="nav-item text-nowrap">
+                <a href="/logout" class="nav-link px-3 text-white">Cerrar sesión</a>
+            </div>
         </div>
-    </div>
+    <?php endif; ?>
+
 
 </header>

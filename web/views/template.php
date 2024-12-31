@@ -1,6 +1,47 @@
 <?php
 
 /*=============================================
+Iniciar variables de sesión
+=============================================*/
+
+ob_start();
+session_start();
+
+/*=============================================
+Zona Horaria
+=============================================*/
+
+date_default_timezone_set("Europe/Madrid");
+
+/*=============================================
+Validar si el token está expirado
+=============================================*/
+
+if(isset($_SESSION["admin"])) {
+
+	$url = "admins?id=".$_SESSION["admin"]->id_admin."&nameId=id_admin&token=".$_SESSION["admin"]->token_admin."&table=admins&suffix=admin";
+	$method = "PUT";
+	$fields = "date_update_admin=".date("Y-m-d G:i:s");
+
+	$update = CurlController::request($url,$method,$fields);
+
+	if($update->status == 303) {
+
+		session_destroy();
+
+		echo '<script>
+		
+			window.location = "/login";
+
+		</script>';
+
+		return;
+
+	}
+
+}
+
+/*=============================================
 Capturar las rutas de la URL
 =============================================*/
 
@@ -51,7 +92,7 @@ foreach($routesArray as $key => $value) {
                 
                     if(!empty($routesArray[0])) {
 
-                        if($routesArray[0] == "login") {
+                        if($routesArray[0] == "login" || $routesArray[0] == "logout") {
 
                             include "pages/".$routesArray[0]."/".$routesArray[0].".php";
 
