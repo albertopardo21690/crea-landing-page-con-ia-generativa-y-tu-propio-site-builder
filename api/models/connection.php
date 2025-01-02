@@ -28,7 +28,7 @@ class Connection{
 
 	static public function apikey(){
 
-		return "trasnehnnrnewberbenrbebrebwendsnqweQUWEJWJnwendsdewndnsasbeMWMENWNEwbnewewnzispodsasdmewjmeenwneew3menwnenwnnwemsmamwqpwoeoiqjdsassnanqwnermreppsowkpppdoskqmqqnweneeJQWJEJWJeewnewnMWMMEWMQP";
+		return "sfsagwshsGRgsXFJDF46234SDGSrtery";
 
 	}
 

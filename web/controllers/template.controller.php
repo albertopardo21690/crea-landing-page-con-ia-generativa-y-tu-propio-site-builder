@@ -1,9 +1,11 @@
-<?php
+<?php 
 
-class TemplateController {
-    
-    public function index() {
-        include "views/template.php";
-    }
-    
+class TemplateController{
+
+	public function index(){
+
+		include "views/template.php";
+	}
+
 }
+

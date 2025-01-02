@@ -1,52 +1,59 @@
-<?php
+<?php 
 
-class AdminsController {
+class AdminsController{
 
-    /*=============================================
-    Login de administradores
-    =============================================*/
+	/*=============================================
+	Login de adminstradores
+	=============================================*/	
 
-    public function login() {
+	public function login(){
 
-        if(isset($_POST["email_admin"])) {
+		if(isset($_POST["email_admin"])){
 
-            $url = "admins?login=true&suffix=admin";
-            $method = "POST";
-            $fields = array(
-                "email_admin" => $_POST["email_admin"],
-                "password_admin" => $_POST["password_admin"]
-            );
+			$url = "admins?login=true&suffix=admin";
+			$method = "POST";
+			$fields = array(
 
-            $login = CurlController::request($url, $method, $fields);
+				"email_admin" => $_POST["email_admin"],
+				"password_admin" => $_POST["password_admin"]
 
-            if($login->status == 200) {
+			);
 
-                $_SESSION["admin"] = $login->results[0];
+			$login = CurlController::request($url,$method,$fields);
+			
+			
+			if($login->status == 200){
 
-                echo '<script>
-                    window.location = "/";
-                </script>';
+				$_SESSION["admin"] = $login->results[0];
+				
+				echo '<script>
 
-            } else {
+				window.location = "/";
 
-                $error = null;
+				</script>';
 
-                if($login->results == "Wrong email") {
+			}else{
 
-                    $error = "El email esta mal escrito";
+				$error = null;
 
-                } else {
+				if($login->results == "Wrong email"){
 
-                    $error = "La contraseña esta mal escrita";
+					$error = "Correo mal escrito";
 
-                }
+				}else{
 
-                echo "<div class='alert alert-danger mt-3'>".$error."</div>";
+					$error = "Contraseña mal escrita";
 
-            }
+				}
 
-        }
-        
-    }
+				echo '<div class="alert alert-danger mt-3">Error al ingresar: '.$error.'</div>';
+
+			}
+
+		}
+
+
+	}
+
 
 }
