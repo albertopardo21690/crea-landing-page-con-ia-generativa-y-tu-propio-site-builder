@@ -25,7 +25,6 @@ Validación Form Bootstrap 5, 4
 /*=============================================
 Función para validar datos repetidos
 =============================================*/
-
 function validateDataRepeat(event, type){
 
   if(type == "landing"){
@@ -74,6 +73,9 @@ function validateDataRepeat(event, type){
     }
 
   })
+
+
+
 
 }
 
@@ -147,7 +149,37 @@ $(document).on("click",".addPlugin",function(){
   var pluginsList = JSON.parse($("#pluginsList").val());
   
   pluginsList.push("_"+itemsPlugins);
+  console.log("pluginsList", pluginsList);
 
   $("#pluginsList").val(JSON.stringify(pluginsList));
 
 })
+
+/*=============================================
+Copiar en el portapapeles
+=============================================*/
+
+function copyToClipboard(code){
+  
+  var textArea = document.createElement("textarea");
+  textArea.value = code;
+
+  document.body.appendChild(textArea);
+
+  textArea.focus();
+
+  textArea.select();
+
+  try{
+
+    document.execCommand("copy");
+    fncToastr("success", "Código copiado en el portapapeles");
+  
+  }catch(err){
+
+    fncToastr("error", "El código no se pudo copiar en el portapapeles");
+  }
+
+  document.body.removeChild(textArea);
+
+}

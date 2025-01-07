@@ -3,9 +3,81 @@ body {
   height: 100%;
   margin: 0px;
   padding: 0px;
+  overflow-x:hidden;
 }
 
 a:link, a:visited, a:hover, a:active{
   text-decoration: none !important;
   color: inherit !important;
 }
+
+/*=============================================
+Scroll Personalizado
+=============================================*/
+
+.custom-scroll::-webkit-scrollbar, .CodeMirror-vscrollbar::-webkit-scrollbar{
+  width:7px;
+  z-index:-1000;
+}
+
+.custom-scroll::-webkit-scrollbar-track, .CodeMirror-vscrollbar::-webkit-scrollbar-track{
+  -webkit-box-shadow: inset 0 0 0px;
+
+}
+
+.custom-scroll::-webkit-scrollbar-thumb, .CodeMirror-vscrollbar::-webkit-scrollbar-thumb{
+  -webkit-box-shadow: inset 0 0 2px;
+  border-radius:5px;
+  background: #eee;
+}
+
+/*=============================================
+Ajuste Codemirror
+=============================================*/
+.CodeMirror-wrap pre {
+   word-break: break-word;
+}
+
+
+/*=============================================
+Copy Code
+=============================================*/
+
+.copy-code-wrap{
+  height: 34px;
+  width: 34px;
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  z-index: 10;
+  cursor: pointer;
+}
+
+.copy-code {
+  height: 32px;
+  width: 32px;
+  position: absolute;
+  top: 14px;
+  right: -2px;
+  background: #339af0;
+  border-radius: 50%;
+  z-index: 10;
+  transition: 0.2s;
+}
+
+.copy-code-bs {
+  height: 32px;
+  width: 32px;
+  position: absolute;
+  top: 27px;
+  right: 10px;
+  background: #339af0;
+  border-radius: 50%;
+  z-index: 10;
+  transition: 0.2s;
+}
+
+.copy-code-wrap:active{
+  transform: translate(0, 0) scale(0.9); 
+}
+

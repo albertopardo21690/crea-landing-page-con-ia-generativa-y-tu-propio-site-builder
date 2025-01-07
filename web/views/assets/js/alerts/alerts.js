@@ -51,7 +51,7 @@ function fncSweetAlert(type, text, url){
 
 		break;
 
-	case "error":
+		case "error":
 
 		if(url == ""){
 
@@ -92,6 +92,28 @@ function fncSweetAlert(type, text, url){
             	text:text
           	})
           	Swal.showLoading()
+
+		break;
+
+		case "confirm":
+
+			return new Promise(resolve =>{
+
+				Swal.fire({
+					text: text,
+					icon: "warning",
+					showCancelButton: true,
+					confirmButtonColor: "#3085d6",
+					cancelButtonColor: "#d33",
+					confirmButtonText: "¡Si, continuar!",
+					cancelButtonText: 'No'
+				}).then((result) => {
+
+					resolve(result.value);
+					
+				});
+
+			});
 
 		break;
 	}
